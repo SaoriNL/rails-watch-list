@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-   def show
+  def show
     @list = List.find(params[:id])
     @bookmarks = Bookmark.where(list_id: params[:id])
   end
