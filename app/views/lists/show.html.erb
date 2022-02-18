@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @list.name %></h1>
+
+  <h1><% @list.movies.each do |movie| %></h1>
+  <h1><%= movie.title %></h1>
+  <h1><% end %></h1>
+
+<%# <p><%= link_to "delete", bookmark_path(@bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %>
+
+</div>

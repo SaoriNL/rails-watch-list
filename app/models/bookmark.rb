@@ -10,6 +10,7 @@ class Bookmark < ApplicationRecord
   # validates :name, presence: true, uniqueness: { scope: :account_id }
 
   validates :comment, length: { minimum: 6 }
+  # validates :movie_id, uniqueness: { scope: :list_id, message: "is already in the list" }
   validates :movie, uniqueness: { scope: [:list] }
   validates_associated :list, :movie
 end

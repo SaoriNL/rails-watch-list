@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <h1>Create your bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment, input_html: { placeholder: 'your comment'} %>
+    <%= f.association :movie %>
+    <%= f.submit 'Submit', class: 'btn btn-primary mt-3' %>
+  <% end %>
+</div>
